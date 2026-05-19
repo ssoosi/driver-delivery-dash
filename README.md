@@ -70,11 +70,12 @@ src/
 │   ├── app.routes.ts
 │   └── app.config.ts
 │
-├── assets/
+├── public/
 │   └── mock-data/
 │       └── delivery-slots.json
 │
-└── main.ts
+├── main.ts
+└── index.html
 ```
 
 📡 Data Source
