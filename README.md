@@ -80,15 +80,15 @@ src/
 
 📡 Data Source
 The dashboard uses a mock JSON file:
-
+```bash
 /assets/mock-data/delivery-slots.json
-
+```
 
 ## 📸 Dashboard Preview
 
 ![Driver Delivery Dashboard](public/screenshot.png)
 
-It includes:
+## It includes:
 
 Driver names
 Slot times
@@ -106,6 +106,6 @@ KPI calculations
 Loading / error / empty states
 
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Built as a training project to demonstrate Angular dashboard architecture and UI design.
