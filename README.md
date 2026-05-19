@@ -83,6 +83,11 @@ The dashboard uses a mock JSON file:
 
 /assets/mock-data/delivery-slots.json
 
+
+## 📸 Dashboard Preview
+
+![Driver Delivery Dashboard](public/screenshot.png)
+
 It includes:
 
 Driver names
