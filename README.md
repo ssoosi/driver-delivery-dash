@@ -81,7 +81,7 @@ src/
 📡 Data Source
 The dashboard uses a mock JSON file:
 ```bash
-/assets/mock-data/delivery-slots.json
+public/mock-data/delivery-slots.json
 ```
 
 ## 📸 Dashboard Preview
