@@ -1,0 +1,166 @@
+[
+  {
+    "id": 1,
+    "driverName": "John Daniels",
+    "slotTime": "08:00 - 09:00",
+    "status": "Available",
+    "latestActivity": "Driver joined slot",
+    "latestActivityTimestamp": "2026-05-18T08:12:00"
+  },
+  {
+    "id": 2,
+    "driverName": "Sarah Khan",
+    "slotTime": "09:00 - 10:00",
+    "status": "Withdrawn",
+    "latestActivity": "Driver withdrew due to vehicle issue",
+    "latestActivityTimestamp": "2026-05-18T09:42:00",
+    "withdrawalReason": "Vehicle Issue"
+  },
+  {
+    "id": 3,
+    "driverName": "Michael Adams",
+    "slotTime": "10:00 - 11:00",
+    "status": "Assigned",
+    "latestActivity": "Driver assigned to route",
+    "latestActivityTimestamp": "2026-05-18T10:05:00"
+  },
+  {
+    "id": 4,
+    "driverName": "Emma Smith",
+    "slotTime": "11:00 - 12:00",
+    "status": "Unavailable",
+    "latestActivity": "Driver marked unavailable",
+    "latestActivityTimestamp": "2026-05-18T11:15:00"
+  },
+  {
+    "id": 5,
+    "driverName": "Liam Johnson",
+    "slotTime": "12:00 - 13:00",
+    "status": "Available",
+    "latestActivity": "Driver joined slot",
+    "latestActivityTimestamp": "2026-05-18T12:02:00"
+  },
+  {
+    "id": 6,
+    "driverName": "Olivia Brown",
+    "slotTime": "13:00 - 14:00",
+    "status": "Assigned",
+    "latestActivity": "Route confirmed",
+    "latestActivityTimestamp": "2026-05-18T13:10:00"
+  },
+  {
+    "id": 7,
+    "driverName": "Noah Williams",
+    "slotTime": "14:00 - 15:00",
+    "status": "Available",
+    "latestActivity": "Driver waiting for assignment",
+    "latestActivityTimestamp": "2026-05-18T14:00:00"
+  },
+  {
+    "id": 8,
+    "driverName": "Ava Jones",
+    "slotTime": "15:00 - 16:00",
+    "status": "Withdrawn",
+    "latestActivity": "Personal emergency",
+    "latestActivityTimestamp": "2026-05-18T15:20:00",
+    "withdrawalReason": "Personal Emergency"
+  },
+  {
+    "id": 9,
+    "driverName": "James Garcia",
+    "slotTime": "16:00 - 17:00",
+    "status": "Assigned",
+    "latestActivity": "Delivery route assigned",
+    "latestActivityTimestamp": "2026-05-18T16:05:00"
+  },
+  {
+    "id": 10,
+    "driverName": "Isabella Martinez",
+    "slotTime": "17:00 - 18:00",
+    "status": "Unavailable",
+    "latestActivity": "Vehicle inspection pending",
+    "latestActivityTimestamp": "2026-05-18T17:12:00"
+  },
+  {
+    "id": 11,
+    "driverName": "Benjamin Lee",
+    "slotTime": "18:00 - 19:00",
+    "status": "Available",
+    "latestActivity": "Ready for dispatch",
+    "latestActivityTimestamp": "2026-05-18T18:00:00"
+  },
+  {
+    "id": 12,
+    "driverName": "Sophia Walker",
+    "slotTime": "19:00 - 20:00",
+    "status": "Assigned",
+    "latestActivity": "Route optimized",
+    "latestActivityTimestamp": "2026-05-18T19:05:00"
+  },
+  {
+    "id": 13,
+    "driverName": "Lucas Hall",
+    "slotTime": "20:00 - 21:00",
+    "status": "Available",
+    "latestActivity": "Awaiting assignment",
+    "latestActivityTimestamp": "2026-05-18T20:00:00"
+  },
+  {
+    "id": 14,
+    "driverName": "Mia Allen",
+    "slotTime": "21:00 - 22:00",
+    "status": "Withdrawn",
+    "latestActivity": "Fatigue reported",
+    "latestActivityTimestamp": "2026-05-18T21:10:00",
+    "withdrawalReason": "Fatigue"
+  },
+  {
+    "id": 15,
+    "driverName": "Ethan Young",
+    "slotTime": "07:00 - 08:00",
+    "status": "Assigned",
+    "latestActivity": "Early shift assigned",
+    "latestActivityTimestamp": "2026-05-18T07:05:00"
+  },
+  {
+    "id": 16,
+    "driverName": "Charlotte King",
+    "slotTime": "06:00 - 07:00",
+    "status": "Unavailable",
+    "latestActivity": "Vehicle breakdown",
+    "latestActivityTimestamp": "2026-05-18T06:30:00"
+  },
+  {
+    "id": 17,
+    "driverName": "Daniel Wright",
+    "slotTime": "05:00 - 06:00",
+    "status": "Available",
+    "latestActivity": "Shift confirmed",
+    "latestActivityTimestamp": "2026-05-18T05:10:00"
+  },
+  {
+    "id": 18,
+    "driverName": "Amelia Scott",
+    "slotTime": "04:00 - 05:00",
+    "status": "Assigned",
+    "latestActivity": "Night delivery assigned",
+    "latestActivityTimestamp": "2026-05-18T04:20:00"
+  },
+  {
+    "id": 19,
+    "driverName": "Henry Green",
+    "slotTime": "03:00 - 04:00",
+    "status": "Available",
+    "latestActivity": "On standby",
+    "latestActivityTimestamp": "2026-05-18T03:00:00"
+  },
+  {
+    "id": 20,
+    "driverName": "Ella Baker",
+    "slotTime": "02:00 - 03:00",
+    "status": "Withdrawn",
+    "latestActivity": "Medical reason",
+    "latestActivityTimestamp": "2026-05-18T02:45:00",
+    "withdrawalReason": "Medical"
+  }
+]

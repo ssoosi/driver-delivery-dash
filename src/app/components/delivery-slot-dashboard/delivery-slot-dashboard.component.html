@@ -1,0 +1,145 @@
+<div class="dashboard-container">
+  <div class="top-section">
+    <div class="dashboard-header">
+      <h1><mat-icon class="logo">local_shipping</mat-icon> Driver Delivery Slot Dashboard</h1>
+      <p>Monitor driver slot availability and operational risks.</p>
+    </div>
+
+
+
+    <div class="kpi-container">
+
+      <mat-card class="kpi-card">
+        <div class="kpi-content">
+          <div class="kpi-label">Available</div>
+          <div class="kpi-value available-text">{{ availableCount }}</div>
+        </div>
+      </mat-card>
+
+      <mat-card class="kpi-card">
+        <div class="kpi-content">
+          <div class="kpi-label">Assigned</div>
+          <div class="kpi-value assigned-text">{{ assignedCount }}</div>
+        </div>
+      </mat-card>
+
+      <mat-card class="kpi-card">
+        <div class="kpi-content">
+          <div class="kpi-label">Withdrawn</div>
+          <div class="kpi-value withdrawn-text">{{ withdrawnCount }}</div>
+        </div>
+      </mat-card>
+
+    </div>
+    <mat-card class="filter-card">
+
+      <div class="filters">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+
+          <mat-select [(ngModel)]="selectedStatus" (selectionChange)="applyFilters()">
+
+            <mat-option value="">All</mat-option>
+            <mat-option value="Available">Available</mat-option>
+            <mat-option value="Assigned">Assigned</mat-option>
+            <mat-option value="Withdrawn">Withdrawn</mat-option>
+            <mat-option value="Unavailable">Unavailable</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+          <mat-label>Search Driver</mat-label>
+
+          <input matInput [(ngModel)]="searchTerm" (input)="applyFilters()" placeholder="Enter driver name">
+
+        </mat-form-field>
+
+      </div>
+
+    </mat-card>
+  </div>
+
+
+  <!-- ERROR -->
+  <div *ngIf="error" class="state-container error-state">
+    <mat-icon>error</mat-icon>
+    <p>Failed to load delivery slots.</p>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div *ngIf="!loading && !error && dataSource.data.length === 0" class="state-container">
+
+    <mat-icon>search_off</mat-icon>
+    <p>No delivery slots match your filters.</p>
+
+  </div>
+
+  <!-- TABLE -->
+  <mat-card class="table-card">
+
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="driverName">
+        <th mat-header-cell *matHeaderCellDef>Driver</th>
+        <td mat-cell *matCellDef="let slot">
+          {{ slot.driverName }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="slotTime">
+        <th mat-header-cell *matHeaderCellDef>Slot Time</th>
+        <td mat-cell *matCellDef="let slot">
+          {{ slot.slotTime }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+
+        <td mat-cell *matCellDef="let slot">
+
+          <span class="status-chip" [ngClass]="getStatusClass(slot.status)">
+
+            {{ slot.status }}
+
+          </span>
+
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="latestActivity">
+        <th mat-header-cell *matHeaderCellDef>Latest Activity</th>
+        <td mat-cell *matCellDef="let slot">
+          {{ slot.latestActivity }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="withdrawalReason">
+        <th mat-header-cell *matHeaderCellDef>Reason</th>
+        <td mat-cell *matCellDef="let slot">
+          {{ slot.withdrawalReason || '-' }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="updated">
+        <th mat-header-cell *matHeaderCellDef>Updated</th>
+
+        <td mat-cell *matCellDef="let slot">
+          {{ slot.latestActivityTimestamp | date:'shortTime' }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <!-- LOADING -->
+    <div *ngIf="loading" class="state-container">
+      <mat-spinner></mat-spinner>
+    </div>
+  </mat-card>
+
+</div>
